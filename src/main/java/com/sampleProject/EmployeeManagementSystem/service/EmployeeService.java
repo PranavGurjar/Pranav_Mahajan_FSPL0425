@@ -14,7 +14,7 @@ public class EmployeeService {
     @Autowired
     private EmployeeRepository employeeRepository;
 
-    public Employee addData(EmployeeDTO employeeDTO) {
+    public Employee employeeData(EmployeeDTO employeeDTO) {
         Employee employee = new Employee();
 
         // Map DTO values to Entity

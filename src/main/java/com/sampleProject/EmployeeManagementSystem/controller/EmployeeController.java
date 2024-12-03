@@ -13,14 +13,14 @@ import static org.springframework.http.HttpStatus.CREATED;
 
 
 @RestController
-@RequestMapping("/ems")
+@RequestMapping("/employee")
 public class EmployeeController {
 
     @Autowired
     EmployeeService employeeService;
 
-    @PostMapping("/addData")
+    @PostMapping("/employeeData")
     public ResponseEntity<Employee> addData (EmployeeDTO employeeDTO){
-        return new ResponseEntity<>(employeeService.addData(employeeDTO),CREATED);
+        return new ResponseEntity<>(employeeService.employeeData(employeeDTO),CREATED);
     }
 }

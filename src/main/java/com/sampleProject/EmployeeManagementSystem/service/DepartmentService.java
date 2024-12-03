@@ -14,7 +14,7 @@ public class DepartmentService {
     @Autowired
     private DepartmentRepository departmentRepository;
 
-    public Department addData(DepartmentDTO departmentDTO) {
+    public Department departmentData(DepartmentDTO departmentDTO) {
         Department department = new Department();
 
         // Map DTO values to Entity

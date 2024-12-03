@@ -14,7 +14,7 @@ public class DesignationService {
     @Autowired
     private DesignationRepository designationRepository;
 
-    public Designation addData(DesignationDTO designationDTO){
+    public Designation designationData(DesignationDTO designationDTO){
         Designation designation = new Designation();
 
         //Map DTO values to Entity

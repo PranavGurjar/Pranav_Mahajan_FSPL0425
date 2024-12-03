@@ -12,15 +12,15 @@ import org.springframework.web.bind.annotation.RestController;
 import static org.springframework.http.HttpStatus.CREATED;
 
 @RestController
-@RequestMapping("/ems")
+@RequestMapping("/designation")
 public class DesignationController {
 
     @Autowired
     DesignationService designationService;
 
-    @PostMapping("/addData")
+    @PostMapping("/designationData")
     public ResponseEntity<Designation> addData (DesignationDTO designationDTO){
-        return new ResponseEntity<>(designationService.addData(designationDTO),CREATED);
+        return new ResponseEntity<>(designationService.designationData(designationDTO),CREATED);
     }
 }
 
