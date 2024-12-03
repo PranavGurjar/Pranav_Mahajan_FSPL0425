@@ -18,6 +18,7 @@ public class DepartmentService {
         Department department = new Department();
 
         // Map DTO values to Entity
+        department.setDepartmentId(0L);
         department.setDepartmentName(departmentDTO.getDepartmentName());
         department.setActive(true); // Assuming all new departments are active by default
         department.setCreateBy(departmentDTO.getCreateBy());

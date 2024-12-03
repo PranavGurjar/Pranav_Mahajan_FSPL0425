@@ -18,6 +18,7 @@ public class EmployeeService {
         Employee employee = new Employee();
 
         // Map DTO values to Entity
+        employee.setEmployeeId(0L);
         employee.setEmployeeFirstName(employeeDTO.getEmployeeFirstName());
         employee.setEmail(employeeDTO.getEmail());
         employee.setActive(true); // Assuming all new employees are active by default
