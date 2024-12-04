@@ -20,3 +20,16 @@ public class EmployeeDTO {
     private String updateBy;
     private LocalDateTime updatedDate;
 }
+
+//{
+//        "employeeFirstName": "Pranav",
+//        "employeeLastName": "Mahajan",
+//        "contactNo": "8329401951",
+//        "email": "pranavmahajan@gmail.com",
+//        "address": "Jalgaon",
+//        "dateOfJoining": "05-Aug-2024",
+//        "salary": 3000.0,
+//        "createBy": "Admin",
+//        "updateBy": "HR"
+//        }
+

@@ -18,7 +18,7 @@ public class DesignationService {
         Designation designation = new Designation();
 
         //Map DTO values to Entity
-        designation.setDesignationId(0L);
+//        designation.setDesignationId(0L);
         designation.setDesignationName(designationDTO.getDesignationName());
         designation.setActive(true); // Assuming all new employees are active by default
         designation.setCreateBy(designationDTO.getCreateBy());

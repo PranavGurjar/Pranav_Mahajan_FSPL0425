@@ -12,7 +12,6 @@ public class Designation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long designationId;
-
     private String designationName;
 
     private boolean isActive;

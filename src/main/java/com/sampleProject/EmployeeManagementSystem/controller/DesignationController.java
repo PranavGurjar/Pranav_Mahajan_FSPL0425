@@ -6,6 +6,7 @@ import com.sampleProject.EmployeeManagementSystem.service.DesignationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,8 +20,21 @@ public class DesignationController {
     DesignationService designationService;
 
     @PostMapping("/designationData")
-    public ResponseEntity<Designation> addData (DesignationDTO designationDTO){
+    public ResponseEntity<Designation> designationData (@RequestBody DesignationDTO designationDTO){
         return new ResponseEntity<>(designationService.designationData(designationDTO),CREATED);
     }
 }
 
+
+
+
+
+
+
+
+
+//        {
+//        "designationName": "Software Engineer",
+//        "createBy": "Admin",
+//        "updateBy": "HR"
+//        }

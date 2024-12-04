@@ -1,3 +1,4 @@
+
 package com.sampleProject.EmployeeManagementSystem.service;
 
 import com.sampleProject.EmployeeManagementSystem.dto.EmployeeDTO;
@@ -7,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Service
 public class EmployeeService {
@@ -17,10 +19,14 @@ public class EmployeeService {
     public Employee employeeData(EmployeeDTO employeeDTO) {
         Employee employee = new Employee();
 
-        // Map DTO values to Entity
-        employee.setEmployeeId(0L);
+//        employee.setEmployeeId(0L);
         employee.setEmployeeFirstName(employeeDTO.getEmployeeFirstName());
+        employee.setEmployeeLastName(employeeDTO.getEmployeeLastName());
+        employee.setContactNo(employeeDTO.getContactNo());
         employee.setEmail(employeeDTO.getEmail());
+        employee.setAddress(employeeDTO.getAddress());
+        employee.setDateOfJoining(employeeDTO.getDateOfJoining());
+        employee.setSalary(employeeDTO.getSalary());
         employee.setActive(true); // Assuming all new employees are active by default
         employee.setCreateBy(employeeDTO.getCreateBy());
         employee.setUpdateBy(employeeDTO.getUpdateBy());
@@ -29,5 +35,34 @@ public class EmployeeService {
 
         // Save and return the saved entity
         return employeeRepository.save(employee);
-    }
+
+
+
+//    public List<Employee> getAllEmployee(employe) {
+//        List<Employee> list = employeeRepository.findAll();
+//        return (Employee) list;
+//    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//    public List<Employee> getAllEmployee(employe) {
+//        List<Employee> list = employeeRepository.findAll();
+//        return (Employee) list;
+//    }
+//
+
+
+
