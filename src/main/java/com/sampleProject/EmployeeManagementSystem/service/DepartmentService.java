@@ -2,12 +2,14 @@ package com.sampleProject.EmployeeManagementSystem.service;
 
 import com.sampleProject.EmployeeManagementSystem.dto.DepartmentDTO;
 import com.sampleProject.EmployeeManagementSystem.entity.Department;
+import com.sampleProject.EmployeeManagementSystem.entity.Designation;
 import com.sampleProject.EmployeeManagementSystem.repository.DepartmentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Service
 public class DepartmentService {
@@ -28,5 +30,10 @@ public class DepartmentService {
 
         // Save and return the saved entity
         return departmentRepository.save(department);
+    }
+
+    public List<Department> getAllDepartment() {
+        List<Department> list = departmentRepository.findAll();
+        return list;
     }
 }

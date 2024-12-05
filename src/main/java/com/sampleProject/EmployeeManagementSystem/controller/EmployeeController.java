@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 import static org.springframework.http.HttpStatus.CREATED;
+import static org.springframework.http.HttpStatus.OK;
 
 
 @RestController
@@ -25,28 +26,14 @@ public class EmployeeController {
         return new ResponseEntity<>(employeeService.employeeData(employeeDTO),CREATED);
     }
 
-//    @GetMapping("/getAllEmployee")
-//    public ResponseEntity<List<Employee>> getAllEmployee() {
-//        List<Employee> employees = employeeService.getAllEmployee();
-//        return new ResponseEntity<>(employees, HttpStatus.OK); // Use HttpStatus.OK (200) here
-//    }
+    @GetMapping("/getAllEmployee")
+    public ResponseEntity<List<Employee>> getAllEmployee() {
+        List<Employee> employees = employeeService.getAllEmployee();
+        return new ResponseEntity<>(employees, OK);
+    }
 }
 
 
-
-
-
-
-
-
-
-
-
-//@GetMapping("/getAllEmployee")
-//public ResponseEntity<List<Employee>> getAllEmployee() {
-//    List<Employee> employees = employeeService.getAllEmployee();
-//    return new ResponseEntity<>(employees, HttpStatus.OK); // Use HttpStatus.OK (200) here
-//}
 
 
 

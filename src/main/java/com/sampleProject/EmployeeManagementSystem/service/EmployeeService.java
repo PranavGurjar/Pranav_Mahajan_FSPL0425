@@ -35,34 +35,19 @@ public class EmployeeService {
 
         // Save and return the saved entity
         return employeeRepository.save(employee);
+    }
 
 
-
-//    public List<Employee> getAllEmployee(employe) {
-//        List<Employee> list = employeeRepository.findAll();
-//        return (Employee) list;
-//    }
+    public List<Employee> getAllEmployee(){
+            List<Employee> list = employeeRepository.findAll();
+            return list;
+    }
 }
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-//    public List<Employee> getAllEmployee(employe) {
-//        List<Employee> list = employeeRepository.findAll();
-//        return (Employee) list;
-//    }
-//
 
 
 
